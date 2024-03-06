@@ -1,0 +1,17 @@
+#footer-nav {
+    background: #000;
+    .col { position: relative;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        svg {
+            display: block;
+            max-width: 64px; height: auto;
+            path {fill: #fff;}
+            
+        }
+        a {
+            color: #fff;
+        }
+    }
+    
+}
