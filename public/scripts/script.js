@@ -5,10 +5,10 @@ var myright = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><titl
 var arrow = "";
 
 var step = 1;
-var Resupply = {1: "down", 2: "down", 3: "up", 4:"right"};
+var Resupply = {1: "down", 2: "down", 3: "up", 4: "right"};
  
 
-jQuery.each(Resupply, function(index, value) {
+jQuery.each(Resupply, function (index, value) {
 	if(value == "up"){ arrow = myup; key="w";}
 	if(value == "down"){ arrow = mydown; key="s";}
 	if(value == "left"){ arrow = myleft; key="a";}
@@ -22,8 +22,8 @@ jQuery.each(Resupply, function(index, value) {
 
 function game(){
 	var currentstep = 1;
-$('body').removeClass();
-$('body').addClass('step'+currentstep);	
+    $('body').removeClass();
+    $('body').addClass('step'+currentstep);	
 	
 	$(document).keypress(function(e)
 		{if(currentstep==1){
@@ -31,10 +31,12 @@ $('body').addClass('step'+currentstep);
 		
 		var s = String.fromCharCode(e.which);
 		var currentkey = $("ul").find('[data-step='+currentstep+']').data('key');
-		if(s == currentkey){console.log('step1complete'); 
-												var step = $("ul").find('[data-step='+currentstep+']');
-									$(step).addClass('complete').removeClass('current');	
-												currentstep=2;}
+		if(s == currentkey){
+            console.log('step1complete'); 
+            var step = $("ul").find('[data-step='+currentstep+']');
+            $(step).addClass('complete').removeClass('current');	
+            currentstep=2;
+        }
    }else if(currentstep==2){
 		$("ul").find('[data-step='+currentstep+']').addClass('current');
 		var s = String.fromCharCode(e.which);
@@ -66,7 +68,25 @@ $('body').addClass('step'+currentstep);
 
 game();	
 
+var picked = "";
+var setpickto = "";
 
+$('.stratpick').on( "click", function() {
+    picked = $(this).data("number");
+    $('#staticBackdrop').attr('data-picknumber', picked);
+});
 
+$('.strategem-tile').on( "click", function() {
+    setpickto = $('#staticBackdrop').data("picknumber");
+    console.log(setpickto);
+    console.log($('#staticBackdrop').data("picknumber"));
+    var strategemicon = $(this).html();
+    
+    $('.stratpick[data-number="'+setpickto+'"]').empty().append(strategemicon);
+   // $("#strategem-cont").find('.stratpick').data(setpickto).after('meow');
+    
+    var myModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('staticBackdrop'));
+    myModal.hide();
+});
 
 	
