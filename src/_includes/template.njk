@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include "components/head.njk" %}
+    
+    {% import "_pattern_macros/strategem_tile.njk" as strategem %}
+    
 <body>
   
 
     
  <div id="wrapper">
     <div id="top" class="buffer"></div>
+     
+     <div id="strat-picker">
+     
+         <div class="strat-col">
+            {{ strategem.strategem('Eagle 500kg Bomb', 'Orbital Walking Barrage.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Gatling Barrage', 'Orbital Gatling Barrage.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Eagle Airstrike', 'Eagle Airstrike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Walking Barrage', 'Orbital Walking Barrage.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Eagle Strafing Run', 'Eagle Strafing Run.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital EMS Strike', 'Orbital EMS Strike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Eagle Smoke Strike', 'Eagle Smoke Strike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Gas Strike', 'Orbital Gas Strike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Railcannon Strike', 'Orbital Walking Barrage.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Eagle Cluster Bomb', 'Eagle Cluster Bomb.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Smoke Strike', 'Orbital Smoke Strike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Airburst Strike', 'Orbital Airburst Strike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Laser', 'Orbital Laser.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital Precision Strike', 'Orbital Precision Strike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital 380MM HE Barrage', 'Orbital 380MM HE Barrage.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Eagle Napalm Airstrike', 'Eagle Napalm Airstrike.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Orbital 120MM HE Barrage', 'Orbital 120MM HE Barrage.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('Eagle 110MM Rocket Pods', 'Eagle 110MM Rocket Pods.png','w','w','w','w','w','w','w'  ) }}
+         </div>
+
+         <div class="strat-col">
+            {{ strategem.strategem('M-105 Stalwart', 'M-105 Stalwart.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('AC-8 Autocannon', 'AC-8 Autocannon.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('SH-32 Shield Generator Pack', 'SH-32 Shield Generator Pack.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('RS-422 Railgun', 'RS-422 Railgun.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('LAS-98 Laser Cannon', 'LAS-98 Laser Cannon.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('ARC-3 Arc Thrower', 'ARC-3 Arc Thrower.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('AX/AR-23 "Guard Dog"', 'AXAR-23 _Guard Dog_.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('FAF-14 SPEAR Launcher', 'FAF-14 SPEAR Launcher.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('GL-21 Grenade Launcher', 'GL-21 Grenade Launcher.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('MG-43 Machine Gun', 'MG-43 Machine Gun.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('SH-20 Ballistic Shield Backpack', 'SH-20 Ballistic Shield Backpack.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('B-1 Supply Pack', 'B-1 Supply Pack.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('FLAM-40 Flamethrower', 'FLAM-40 Flamethrower.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('AX/LAS-5 "Guard Dog" Rover', 'AXLAS-5 _Guard Dog_ Rover.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('GR-8 Recoilless Rifle', 'GR-8 Recoilless Rifle.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('LIFT-850 Jump Pack', 'LIFT-850 Jump Pack.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('APW-1 Anti-Materiel Rifle', 'APW-1 Anti-Materiel Rifle.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('EAT-17 Expendable Anti-tank', 'EAT-17 Expendable Anti-tank.png','w','w','w','w','w','w','w'  ) }}
+         </div>
+         
+     </div>
+     
+     
+     <div id="game">
+         
+         <div id="strategem-cont"></div>
+         <div id="strategems">
+            <ul id="strategem">
+           </ul>
+         
+         
+         </div>
+         
+         
+         
+         
+     </div>
      
      
      
@@ -17,8 +82,9 @@
 </div><!-- end of wrapper -->
     
     
-    
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="scripts/script.js"></script>   
 
 </body>
 </html>

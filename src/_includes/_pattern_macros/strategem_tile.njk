@@ -1,0 +1,26 @@
+{% macro strategem(name, img, key1, key2, key3, key4, key5, key6, key7) %}
+
+<div class="strategem-tile">
+
+  
+    {% if img|length %}
+  <div class="icon-container">
+    <img src="/img/{{img}}" alt="">
+  </div>
+  {% else %}{% endif %}
+
+  <div class="card-body">
+{# Loop through all the users 
+    {% if key5|length %}
+    <p class="card-location">{{ key5 }}</p>
+    {% else %}{% endif %}
+
+{# Loop through all the users 
+    {% if key5|length %}
+    <p class="card-text">{{ key5 }}</p>
+    {% else %}{% endif %}
+#}
+  </div>
+</div>
+
+{% endmacro %} 

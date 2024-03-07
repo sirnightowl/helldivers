@@ -1,4 +1,4 @@
-@import "bootstrap/bootstrap";
+//@import "bootstrap/bootstrap";
 
 @import
   "components/header",
@@ -75,10 +75,46 @@ body {
         opacity: 0.1;
     }
     
-    
+     
     
 }
+
+#test {top: 0;}   
 
 #top {top: 0; border-bottom: 10px solid white;}
 #bottom{bottom: 0; border-top: 10px solid white;}
 .buffer {height: 10%; display: block; width: 100%; position: absolute;}
+
+
+
+
+#strategem {display: flex;
+	li {
+		display: inline-block;
+		width: 100px; height: 100px;
+		svg {width: 100px; height: 100px; fill: #d1d1d1;
+			path {width: 100%; display: block;}
+		}
+		
+	}
+    li.complete {
+        svg {fill: #DCCC50;}  
+    }
+}
+
+
+#game {width: 500px; height: 300px; position: absolute; top: 50%; left: 50%;
+transform: translateX(-50%) translateY(-50%); display: block;
+}
+
+#strat-picker {display: flex;}
+.strat-col {display: flex; flex-wrap:wrap; width: 350px; position: relative; z-index: 2;}
+
+.strategem-tile {
+    width: calc(25% - 10px); margin: 5px;
+    .icon-container {
+        padding: 3px; border: 4px solid #676767;
+        &:hover {border: 4px solid #FFE900;}
+        img {width: 100%; display: block;}
+    }
+}
