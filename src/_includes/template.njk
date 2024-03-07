@@ -11,7 +11,54 @@
  <div id="wrapper">
     <div id="top" class="buffer"></div>
      
-     <div id="strat-picker">
+     
+     
+     
+     
+     
+     <div id="game">
+         
+         <div id="strategem-cont" class="flex-wrap">
+             <p class="w-100 fs-2 fw-bolder text-light text-uppercase text-center">Select your strategems</p>
+             <button type="button" class="btn stratpick" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+             <button type="button" class="btn stratpick" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+             <button type="button" class="btn stratpick" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+             <button type="button" class="btn stratpick" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+         </div>
+         
+         
+         
+         <div id="strategems">
+            <ul id="strategem">
+           </ul>
+         
+         
+         </div>
+         
+         
+         
+         
+     </div>
+     
+     
+     
+     
+    
+    
+    <div id="bottom" class="buffer"></div>  
+</div><!-- end of wrapper -->
+    
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+        
+        <div id="strat-picker">
      
          <div class="strat-col">
             {{ strategem.strategem('Eagle 500kg Bomb', 'Orbital Walking Barrage.png','w','w','w','w','w','w','w'  ) }}
@@ -55,35 +102,31 @@
             {{ strategem.strategem('EAT-17 Expendable Anti-tank', 'EAT-17 Expendable Anti-tank.png','w','w','w','w','w','w','w'  ) }}
          </div>
          
-     </div>
-     
-     
-     <div id="game">
-         
-         <div id="strategem-cont"></div>
-         <div id="strategems">
-            <ul id="strategem">
-           </ul>
-         
-         
+         <div class="strat-col">
+            {{ strategem.strategem('FX-12 Shield Generator Relay', 'FX-12 Shield Generator Relay.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/M-23 EMS Mortar Sentry', 'A--M-23 EMS Mortar Sentry.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/MLS-4X Rocket Sentry', 'A--MLS-4X Rocket Sentry.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/G-16 Gatling Sentry', 'A--G-16 Gatling Sentry.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/ARC-3 Tesla Tower', 'A--ARC-3 Tesla Tower.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/M-12 Mortar Sentry', 'A--M-12 Mortar Sentry.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('MD-6 Anti-Personnel Minefield', 'MD-6 Anti-Personnel Minefield.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/MG-43 Machine Gun Sentry', 'A--MG-43 Machine Gun Sentry.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('A/AC-8 Autocannon Sentry', 'A--AC-8 Autocannon Sentry.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('MD-I4 Incendiary Mines', 'MD-I4 Incendiary Mines.png','w','w','w','w','w','w','w'  ) }}
+            {{ strategem.strategem('E/MG-101 HMG Emplacement', 'E--MG-101 HMG Emplacement.png','w','w','w','w','w','w','w'  ) }}
          </div>
          
          
-         
-         
      </div>
-     
-     
-     
-     
-    
-    
-    <div id="bottom" class="buffer"></div>  
-</div><!-- end of wrapper -->
-    
-    
+        
+        
+        
+    </div>
+  </div>
+</div>  
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="scripts/script.js"></script>   
 
 </body>

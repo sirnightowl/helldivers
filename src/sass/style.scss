@@ -1,4 +1,4 @@
-//@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap";
 
 @import
   "components/header",
@@ -36,7 +36,7 @@
   font-style: normal;
 }
 
-
+*{ font-family: "Bai Jamjuree", sans-serif !important;}
 
 html {
   height: 100%;
@@ -72,14 +72,13 @@ body {
         position: absolute;
         left: 50%; top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        opacity: 0.1;
+           opacity: 0.05;
     }
     
      
     
 }
 
-#test {top: 0;}   
 
 #top {top: 0; border-bottom: 10px solid white;}
 #bottom{bottom: 0; border-top: 10px solid white;}
@@ -88,8 +87,8 @@ body {
 
 
 
-#strategem {display: flex;
-	li {
+#strategem {display: flex; display: none;
+ 	li {
 		display: inline-block;
 		width: 100px; height: 100px;
 		svg {width: 100px; height: 100px; fill: #d1d1d1;
@@ -104,11 +103,21 @@ body {
 
 
 #game {width: 500px; height: 300px; position: absolute; top: 50%; left: 50%;
-transform: translateX(-50%) translateY(-50%); display: block;
+transform: translateX(-50%) translateY(-50%); display: block; z-index:5;
 }
 
+
+#strategem-cont {display: flex; justify-content: center; color: #fff; }
+
+button.stratpick {
+    width: 78px; height: 78px; padding: 3px; border: 4px solid #676767; display: block;
+    margin: 5px;
+}
+
+#strat-picks {position: relative; z-index: 3;}
+
 #strat-picker {display: flex;}
-.strat-col {display: flex; flex-wrap:wrap; width: 350px; position: relative; z-index: 2;}
+.strat-col {display: flex; flex-wrap:wrap; width: 350px; position: relative; z-index: 2;     align-content: flex-start;}
 
 .strategem-tile {
     width: calc(25% - 10px); margin: 5px;
